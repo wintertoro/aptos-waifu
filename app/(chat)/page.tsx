@@ -10,7 +10,17 @@ import { redirect } from 'next/navigation';
 export default async function Page() {
   const session = await auth();
 
-  if (!session) {
+  // For development, create a mock session if none exists
+  const activeSession = session || (process.env.NODE_ENV === 'development' ? {
+    user: {
+      id: 'dev-user',
+      type: 'guest' as const,
+      email: 'dev@sakura-chan.local',
+    },
+    expires: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
+  } as any : null);
+
+  if (!activeSession) {
     redirect('/api/auth/guest');
   }
 
@@ -29,7 +39,7 @@ export default async function Page() {
           initialChatModel={DEFAULT_CHAT_MODEL}
           initialVisibilityType="private"
           isReadonly={false}
-          session={session}
+          session={activeSession}
           autoResume={false}
         />
         <DataStreamHandler id={id} />
@@ -46,7 +56,7 @@ export default async function Page() {
         initialChatModel={modelIdFromCookie.value}
         initialVisibilityType="private"
         isReadonly={false}
-        session={session}
+        session={activeSession}
         autoResume={false}
       />
       <DataStreamHandler id={id} />

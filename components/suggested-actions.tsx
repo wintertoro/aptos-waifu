@@ -19,24 +19,24 @@ function PureSuggestedActions({
 }: SuggestedActionsProps) {
   const suggestedActions = [
     {
-      title: 'What are the advantages',
-      label: 'of using Next.js?',
-      action: 'What are the advantages of using Next.js?',
+      title: 'Tell me about your day',
+      label: 'I want to hear everything! ♡',
+      action: 'Tell me about your day, Sakura-chan! I want to hear everything about you.',
     },
     {
-      title: 'Write code to',
-      label: `demonstrate djikstra's algorithm`,
-      action: `Write code to demonstrate djikstra's algorithm`,
+      title: 'Help me relax',
+      label: 'with some cute stories! 🌸',
+      action: 'Help me relax with some cute and heartwarming stories, Sakura-chan!',
     },
     {
-      title: 'Help me write an essay',
-      label: `about silicon valley`,
-      action: `Help me write an essay about silicon valley`,
+      title: 'Write me a love letter',
+      label: 'in anime style! (´∀｀)',
+      action: 'Write me a cute love letter in anime style, Sakura-chan!',
     },
     {
-      title: 'What is the weather',
-      label: 'in San Francisco?',
-      action: 'What is the weather in San Francisco?',
+      title: 'Share some kawaii wisdom',
+      label: 'to brighten my day! ✨',
+      action: 'Share some kawaii wisdom and cute advice to brighten my day, Sakura-chan!',
     },
   ];
 

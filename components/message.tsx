@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { memo, useState } from 'react';
 import type { Vote } from '@/lib/db/schema';
 import { DocumentToolCall, DocumentToolResult } from './document';
-import { PencilEditIcon, SparklesIcon } from './icons';
+import { PencilEditIcon, SparklesIcon, SakuraIcon } from './icons';
 import { Markdown } from './markdown';
 import { MessageActions } from './message-actions';
 import { PreviewAttachment } from './preview-attachment';
@@ -60,9 +60,9 @@ const PurePreviewMessage = ({
           )}
         >
           {message.role === 'assistant' && (
-            <div className="size-8 flex items-center rounded-full justify-center ring-1 shrink-0 ring-border bg-background">
-              <div className="translate-y-px">
-                <SparklesIcon size={14} />
+            <div className="size-8 flex items-center rounded-full justify-center ring-1 shrink-0 ring-pink-300 bg-gradient-to-br from-pink-100 to-pink-200 dark:from-pink-900 dark:to-pink-800 dark:ring-pink-600">
+              <div className="translate-y-px text-pink-600 dark:text-pink-300">
+                <SakuraIcon size={16} />
               </div>
             </div>
           )}
@@ -270,13 +270,15 @@ export const ThinkingMessage = () => {
           },
         )}
       >
-        <div className="size-8 flex items-center rounded-full justify-center ring-1 shrink-0 ring-border">
-          <SparklesIcon size={14} />
+        <div className="size-8 flex items-center rounded-full justify-center ring-1 shrink-0 ring-pink-300 bg-gradient-to-br from-pink-100 to-pink-200 dark:from-pink-900 dark:to-pink-800 dark:ring-pink-600">
+          <div className="translate-y-px text-pink-600 dark:text-pink-300">
+            <SakuraIcon size={16} />
+          </div>
         </div>
 
         <div className="flex flex-col gap-2 w-full">
-          <div className="flex flex-col gap-4 text-muted-foreground">
-            Hmm...
+          <div className="flex flex-col gap-4 text-pink-500 dark:text-pink-400">
+            Sakura-chan is thinking... (´∀｀)♡
           </div>
         </div>
       </div>

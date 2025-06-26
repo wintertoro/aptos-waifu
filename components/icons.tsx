@@ -1172,3 +1172,56 @@ export const WarningIcon = ({ size = 16 }: { size?: number }) => {
     </svg>
   );
 };
+
+export const SakuraIcon = ({ size = 16 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 2C12 2 8 6 12 10C16 6 12 2 12 2Z"
+      fill="currentColor"
+      opacity={0.8}
+    />
+    <path
+      d="M12 22C12 22 8 18 12 14C16 18 12 22 12 22Z"
+      fill="currentColor"
+      opacity={0.8}
+    />
+    <path
+      d="M2 12C2 12 6 8 10 12C6 16 2 12 2 12Z"
+      fill="currentColor"
+      opacity={0.8}
+    />
+    <path
+      d="M22 12C22 12 18 8 14 12C18 16 22 12 22 12Z"
+      fill="currentColor"
+      opacity={0.8}
+    />
+    <circle
+      cx="12"
+      cy="12"
+      r="3"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const WaifuHeartIcon = ({ size = 16 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+      fill="currentColor"
+      opacity={0.8}
+    />
+  </svg>
+);

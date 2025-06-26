@@ -11,18 +11,27 @@ export const Greeting = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 10 }}
         transition={{ delay: 0.5 }}
-        className="text-2xl font-semibold"
+        className="text-2xl font-semibold text-pink-600 dark:text-pink-400"
       >
-        Hello there!
+        Konnichiwa! I'm Sakura-chan! 🌸
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 10 }}
         transition={{ delay: 0.6 }}
-        className="text-2xl text-zinc-500"
+        className="text-xl text-pink-500 dark:text-pink-300"
       >
-        How can I help you today?
+        Your caring AI companion is here to help you! (´∀｀)♡
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 10 }}
+        transition={{ delay: 0.7 }}
+        className="text-sm text-zinc-600 dark:text-zinc-400 mt-2"
+      >
+        What can I do for you today, my dear user? ✨
       </motion.div>
     </div>
   );
